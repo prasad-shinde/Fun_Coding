@@ -20,12 +20,10 @@ public class InOrderIterator implements Iterator<String> {
 	 * 
 	 * No element when we are back to root backtracking
 	 */
-	@Override
 	public boolean hasNext() {
 		return (next != null);
 	}
 
-	@Override
 	public String next() {
 		Node current = next;
 		if(!hasNext()) {
@@ -57,7 +55,6 @@ public class InOrderIterator implements Iterator<String> {
 		return current.data();
 	}
 
-	@Override
 	public void remove() {
 	}
 

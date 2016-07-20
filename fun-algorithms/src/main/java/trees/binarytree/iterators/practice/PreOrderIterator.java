@@ -30,11 +30,9 @@ public class PreOrderIterator implements Iterator<String>{
 		next=node;
 	}
 	
-	@Override
 	public boolean hasNext() {
 		return next!=null;
 	}
-	@Override
 	public String next() {
 		if(!hasNext())
 			throw new NullPointerException("End of preorder traversal");
@@ -61,7 +59,6 @@ public class PreOrderIterator implements Iterator<String>{
 		return current.data();
 	}
 	
-	@Override
 	public void remove() {
 		// TODO Auto-generated method stub
 		

@@ -14,7 +14,10 @@ import java.util.Queue;
  * 3. Every Red node must have a black parent
  * 4. All simple paths from a given root node to the leaves descending from the given node have equal/same black height.
  * 
- * Black Height : Maximum number of black node from a given node to a path till leaf node. 
+ * Black Height : Maximum number of black node from a given node to a path till leaf node.
+ * 
+ *  References : http://algs4.cs.princeton.edu/33balanced/RedBlackBST.java.html
+ *  
  * @author Prasad
  *
  * @param <Key>		The key over which the BST is constructed

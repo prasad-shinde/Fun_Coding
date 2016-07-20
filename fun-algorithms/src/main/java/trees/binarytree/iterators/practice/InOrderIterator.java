@@ -26,12 +26,10 @@ public class InOrderIterator implements Iterator<String>{
 		}
 	}
 	
-	@Override
 	public boolean hasNext() {
 		return next!=null && !next.isNull();
 	}
 
-	@Override
 	public String next() {
 		Node current = next;
 		if(!hasNext()) {
@@ -57,7 +55,6 @@ public class InOrderIterator implements Iterator<String>{
 		return current.data();
 	}
 
-	@Override
 	public void remove() {
 		// TODO Auto-generated method stub
 		

@@ -16,7 +16,6 @@ public class PreOrderIterator implements Iterator<String>{
 		return nextNode != null;
 	}
 
-	@Override
 	public String next() {
 		if(nextNode == null || nextNode.isNull())
 			throw new NoSuchElementException();
@@ -40,7 +39,6 @@ public class PreOrderIterator implements Iterator<String>{
 		return current.data();
 	}
 
-	@Override
 	public void remove() {
 		// TODO Auto-generated method stub
 		

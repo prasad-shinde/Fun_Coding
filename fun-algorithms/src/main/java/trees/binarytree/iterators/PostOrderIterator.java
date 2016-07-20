@@ -66,7 +66,6 @@ public class PostOrderIterator implements Iterator<String>{
 		return current.data();
 	}
 
-	@Override
 	public void remove() {
 	}
 }
