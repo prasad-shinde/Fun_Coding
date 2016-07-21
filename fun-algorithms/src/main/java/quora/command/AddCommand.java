@@ -22,7 +22,6 @@ public class AddCommand implements Command {
 		dataString = ds;
 	}
 	
-	@Override
 	public Object execute(Trie t) {
 		t.add(dataString,type, score, id);
 		return null;

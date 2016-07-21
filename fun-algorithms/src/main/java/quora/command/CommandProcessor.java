@@ -25,7 +25,6 @@ public class CommandProcessor implements Runnable {
 		queue.offer(cmd);
 	}
 
-	@Override
 	public void run() {
 		while(true) {
 			try {

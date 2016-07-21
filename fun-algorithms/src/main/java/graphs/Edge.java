@@ -22,7 +22,6 @@ public class Edge implements Comparable<Edge>{
 		return weight;
 	}
 	
-	@Override
 	public int compareTo(Edge arg0) {
 		if(weight < arg0.weight()) {
 			return -1;

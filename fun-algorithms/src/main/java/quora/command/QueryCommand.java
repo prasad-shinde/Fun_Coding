@@ -19,7 +19,6 @@ public class QueryCommand implements Command {
 		dataString = searchString;
 	}
 	
-	@Override
 	public Object execute(Trie t) {
 		List<String> result = t.query(numOfResults, dataString);
 		if(result == null) {

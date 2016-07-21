@@ -33,7 +33,6 @@ public class Vertex implements Comparable<Vertex>{
 		return neighbours;
 	}
 
-	@Override
 	public int compareTo(Vertex arg0) {
 		if(v == arg0.vertex())
 			return 0;

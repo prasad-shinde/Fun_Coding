@@ -26,7 +26,6 @@ public class WqueryCommand implements Command {
 		dataString = searchText;
 	}
 	
-	@Override
 	public Object execute(Trie t) {
 		List<String> result = t.wquery(numOfResults, numOfBoost, typeBoost, IdBoost, dataString);
 		if(result == null) {
