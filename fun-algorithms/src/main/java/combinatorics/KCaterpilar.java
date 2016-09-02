@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import math.GCD;
+import math.MathUtil;
 import permutation.SubsetUtil;
 
 /**
@@ -63,9 +63,9 @@ public class KCaterpilar {
 		
 		for(List<Integer> subset:lists) {
 			if((subset.size() % 2) == 1) {
-				leavesEaten += Math.floor(numOfLeaves/GCD.lcm(subset));
+				leavesEaten += Math.floor(numOfLeaves/MathUtil.lcm(subset));
 			} else {
-				leavesEaten -= Math.floor(numOfLeaves/GCD.lcm(subset));
+				leavesEaten -= Math.floor(numOfLeaves/MathUtil.lcm(subset));
 			}
 		}
 

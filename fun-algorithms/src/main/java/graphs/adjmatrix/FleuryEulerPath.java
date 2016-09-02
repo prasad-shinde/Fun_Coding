@@ -13,11 +13,11 @@ import graphs.adjlist.EulerCycleGraph;
  * 
  * Fleurys Algorithms hepls us print the Euler circuit or path.
  * 
- * Algorithm: 1. Make sure the graph has either 0 or 2 odd vertices. 2. If there
- * are 0 odd vertices, start anywhere. If there are 2 odd vertices, start at one
- * of them. 3. Follow edges one at a time. If you have a choice between a bridge
- * and a non-bridge, always choose the non-bridge. 4. Stop when you run out of
- * edges.
+ * Algorithm: 
+ * 1. Make sure the graph has either 0 or 2 odd vertices. 
+ * 2. If there are 0 odd vertices, start anywhere. If there are 2 odd vertices, start at one of them. 
+ * 3. Follow edges one at a time. If you have a choice between a bridge and a non-bridge, always choose the non-bridge. 
+ * 4. Stop when you run out of edges.
  * 
  * The idea is here is to not burn the bridges so that we can get back to the
  * same vertex.

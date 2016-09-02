@@ -3,7 +3,7 @@ package dynamicprogramming.simplified;
 
 /**
  * Subset Sum : 
- * The subset problem is one of the important problem in computer science. The problem is a know NP-Complete problem. Thankfull
+ * The subset problem is one of the important problem in computer science. The problem is a know NP-Complete problem. Thankfully
  * there is a pseudo polynomial solution available to this problem given below ;)
  * 
  * Problem : given a set of values(an array of values), does there exist a subset of these values which sums up to a given value.

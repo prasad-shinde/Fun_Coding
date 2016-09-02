@@ -99,7 +99,33 @@ public class ArticulationPointGraph {
 					aps.add(u);
 				}
 			} else {
+				// v is not u's parent
 				if (v != parent[u]) {
+					low[u] = Math.min(low[u], disc[v]);
+				}
+			}
+		}
+	}
+	
+	private void hasAp(int u,boolean[] visited,int[] parent,int[] low,int[] disc,Set<Integer> aps) {
+		int children = 0;
+		time++;
+		low[u] = disc[u] = time;
+		visited[u] = true;
+		
+		for(int v:adjacentTo(u)) {
+			if(!visited[v]) {
+				parent[v] = u;
+				children++;
+				hasAp(v,visited,parent,low,disc,aps);
+				low[u] = Math.min(low[u], low[v]);
+				
+				if(parent[u] == -1 && children >1)
+					aps.add(u);
+				if(parent[u]!= -1 && disc[u] <= low[v])
+					aps.add(u);
+			} else {
+				if(v != parent[u]) {
 					low[u] = Math.min(low[u], disc[v]);
 				}
 			}

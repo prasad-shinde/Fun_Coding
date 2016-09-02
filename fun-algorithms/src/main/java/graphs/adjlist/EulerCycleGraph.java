@@ -6,15 +6,15 @@ import java.util.List;
 /**
  * Eulerian Path/Circuit :
  * 
- * Eulerian Path : Eulerian path is a path in a graph which starts and ends at the same vertex.
+ * Eulerian Path : In graph theory, an Eulerian trail (or Eulerian path) is a trail in a graph which visits every edge exactly once.
  * 
- * Eulerian Circuit : Eulerian Curcuit is a Eulerian Path which starts and ends on the same vertex.
+ * Eulerian Circuit : an Eulerian circuit or Eulerian cycle is an Eulerian trail which starts and ends on the same vertex.
  * 
  * Follwoing are the conditions for a graph to be Eulerian
  * 
  * Eulerian Cycle :
  * An undirected graph has Eulerian cycle if following two conditions are true.
- * 		a) All vertices with non-zero degree are connected. We don’t care about vertices with zero degree because they don’t belong 
+ * 		a) All vertices with non-zero degree are connected. We don't care about vertices with zero degree because they don't belong 
  * 		to Eulerian Cycle or Path (we only consider all edges).
  * 		b) All vertices have even degree
  * 

@@ -2,7 +2,7 @@ package math;
 
 import java.util.List;
 
-public class GCD {
+public class MathUtil {
 	/**
 	 * @param a
 	 * @param b
@@ -28,6 +28,14 @@ public class GCD {
 		return (b==0)?a:gcd1(b,a%b);
 	}
 	
+	public static long gcd2(long a,long b) {
+		while(b!=0) {
+			long t = b;
+			b = a % b;
+			a = t;
+		}
+		return a;
+	}
 	
 	public static long lcm(long a,long b) {
 		return Math.abs(a)*Math.abs(b)/gcd1(a,b);

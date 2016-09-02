@@ -13,8 +13,8 @@ public class GCDTest {
 
 	@Test
 	public void test() {
-		assertEquals("",2,GCD.gcd(10, 24));
-		assertEquals("",2,GCD.gcd1(10, 24));
+		assertEquals("",2,MathUtil.gcd(10, 24));
+		assertEquals("",2,MathUtil.gcd1(10, 24));
 	}
 
 }

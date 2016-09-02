@@ -16,6 +16,12 @@ package dynamicprogramming.simplified;
  * Reference : http://www.cs.berkeley.edu/~vazirani/algorithms/chap6.pdf
  */
 public class LongestIncreasingSequence {
+	/**
+	 * Time Complexity = O(n^2)
+	 * 
+	 * @param list
+	 * @return
+	 */
 	public static int lis(int[] list) {
 		int[] lis = new int[list.length];
 		int[] prev = new int[list.length];
@@ -39,6 +45,37 @@ public class LongestIncreasingSequence {
 		return lis[list.length-1];
 	}
 	
+	/**
+	 * Time Complexity : O(nlgn) because of binary search but finding the elements in 
+	 * longest increasing sequence needs some more work probably.
+	 * 
+	 * @param list
+	 * @return
+	 */
+	public static int lis1(int[] list) {
+		int[] tails = new int[list.length];
+		int size = 0;
+
+		for(int num:list) {
+			int i = 0;
+			int j = size;
+			while(i!=j) {
+				int mid = (i+j)/2;
+				if(tails[mid] < num) {
+					i = mid+1;
+				} else {
+					j = mid;
+				}
+			}
+			
+			tails[i] = num;
+			
+			if(i==size)
+				size++;
+		}
+		return size;
+	}
+	
 	public static void print(int[] list,int[] prev) {
 		int i = list.length-3;
 		while(prev[i]!=-1) {
@@ -49,7 +86,7 @@ public class LongestIncreasingSequence {
 	}
 	
 	public static void main(String[] args) {
-		int[] list = {5, 2, 8, 6, 3, 6, 9, 7};
-		lis(list);
+		int[] list = {5, 2, 8, 6, 3, 6, 4, 1, 7};
+		lis1(list);
 	}
 }
