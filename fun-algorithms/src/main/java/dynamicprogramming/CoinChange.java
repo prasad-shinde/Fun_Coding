@@ -12,7 +12,7 @@ public class CoinChange {
 				// jth coin is included
 				int x = (i-coins[j]>=0)?dp[i-coins[j]][j]:0; 
 				// jth coin is not included
-				int y = (j>=1)?dp[i][j-1]:0;
+				int y = (j>=1)?dp[i][j-1]:dp[i][0];
 				
 				dp[i][j] = x + y;
 			}

@@ -33,7 +33,7 @@ public class GraphSCC {
 	public GraphSCC() {
 	}
 	
-	public int[][] transpose() {
+	private int[][] transpose() {
 		int[][] transpose = new int[size][size];
 		
 		for(int i=0;i<size;i++) {

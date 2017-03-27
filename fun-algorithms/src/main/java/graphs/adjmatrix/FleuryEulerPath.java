@@ -11,7 +11,7 @@ import graphs.adjlist.EulerCycleGraph;
  * circuit description. It also show ways to check if a graph is eulerian or not
  * {@link EulerCycleGraph#isEulerian()} .
  * 
- * Fleurys Algorithms hepls us print the Euler circuit or path.
+ * Fleurys Algorithms helps us print the Euler circuit or path.
  * 
  * Algorithm: 
  * 1. Make sure the graph has either 0 or 2 odd vertices. 
@@ -77,7 +77,7 @@ public class FleuryEulerPath {
 		return count;
 	}
 
-	public boolean isValid(int u, int v) {
+	private boolean isValid(int u, int v) {
 		// if the edge is not valid or has been removed
 		if(adjMatrix[u][v] == 0 || adjMatrix[v][u] == 0)
 			return false;
@@ -87,8 +87,8 @@ public class FleuryEulerPath {
 			return true;
 
 		boolean[] visited = new boolean[size];
+		
 		Arrays.fill(visited, false);
-
 		int count1 = dfsCount(u, visited);
 		removeEdge(u, v);
 		Arrays.fill(visited, false);

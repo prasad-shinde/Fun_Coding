@@ -8,7 +8,29 @@ import java.util.Map;
 import java.util.Set;
 
 public class Test {
+	public static int compareVersion(String version1, String version2) {
+        String[] v1 = (version1+".").split(".");
+        String[] v2 = (version2+".").split(".");
+        
+        if(v1.length > v2.length)
+            return 1;
+            
+        if(v1.length < v2.length)
+            return -1;
+        
+        for(int i = 0;i<v1.length;i++) {
+            if(Integer.parseInt(v1[i]) > Integer.parseInt(v2[i])) {
+                return 1;
+            }
+            if(Integer.parseInt(v1[i]) < Integer.parseInt(v2[i])) {
+                return -1;
+            }
+        }
+        return 0;
+    }
+	
 	public static void main(String[] args) {
+		System.out.print(compareVersion("1.23","0.54"));
 		//int repeat[] = new int[] {1 ,2,3 ,4,4,5,1,1}; 
 		//removeDuplicates(repeat);
 		/*String[] words = words("hi how are you");
@@ -32,8 +54,8 @@ public class Test {
 		
 		System.out.print("\nAre anagrams? : " + areAnagrams("hello","ollhe"));
 		System.out.print("\nAre anagrams? : " + areAnagrams("hello","ollhse"));*/
-		StringBuffer s = new StringBuffer("hel");
-		permute(s,0);
+//		StringBuffer s = new StringBuffer("hel");
+//		permute(s,0);
 	}
 	
 	public static int gcd(int a,int b) {
